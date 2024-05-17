@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Sabrina" />
+    <meta name="description" content="Lorem ipsum dolor sit amet" />
+
+    <title>Cari Mobil</title>
+
+    <!-- CSS Internal -->
+    <style>
+        *, html, body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            margin: 0px;
+        }
+        .Cnavbar {
+            width: 1168px;
+            height: 56px;
+            padding-top: 24px;
+            margin-left: 136px;
+            margin-right: 136px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .Cnavbar > ul {
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+        .Cnavbar > ul > li {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+        }
+        .Cnavbar > ul > li > a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+            align-items: center;
+        }
+        .logos {
+            width: 100px;
+            height: 36px;
+            margin-top: 1px;
+            background-color: #0D28A6;
+            display: flex;
+            position: relative;
+            text-align: center;
+        }
+        .register {
+            width: 60px;
+            height:20px;
+            display: flex;
+            padding: 6px 10px 6px 10px;
+            gap: 10px;
+            border-radius: 2px 0px 0px 0px;
+            opacity: 0px;
+            background-color: hsla(122, 39%, 54%, 1);
+            color: hsla(0, 0%, 100%, 1);
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 700;
+            align-items: center;
+            text-align: center;
+        }
+        .register > a {
+            font-size: 14px;
+            line-height: 20px;
+            justify-self: center;
+            align-items: center;
+            text-align: center;
+            font-weight: 700;
+        }
+        .C-copy {
+            width: 1304px;
+            height: 431px;
+            top: 87px;
+            left: 136px;
+            bottom: 4px;
+            gap: 0px;
+            opacity: 0px;
+            background-color: transparent;
+            position: absolute;
+            display: flex;
+        }
+        .C-row {
+            width: 580px;
+            height: 407px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+        .image-car > img {
+            position: absolute;
+            justify-content: end;
+            left: 599px !important;
+            top: 20px;
+            border-radius: 60px 0 0 0;
+            
+        }
+        .bg-image {
+            width: 704px;
+            height: 400px;
+            /* position: absolute; */
+            background-color: #0D28A6;
+            background-size: 50%;
+        }
+        .container-footer {
+            width: 1141px;
+            height: 128px;
+            top: 128px;
+            left: 173px;
+            margin: 0px;
+            padding: 0px;
+            justify-content: space-between;
+            align-items: left;
+            position: relative;
+            display: flex;
+            background-color: white;
+        }
+        .Caddress {
+            width: 268px;
+            height: 110px;
+        }
+        .address > p {
+            width: 268px;
+            height: 38px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-bottom: 16px;
+        }
+        .Cnavigate {
+            width: 79px;
+            height: 128px;
+            gap: 16px;
+            opacity: 0px;
+        }
+        .navigate {
+            width: 79px;
+            height: 36px;
+            margin-left: 86px;
+        }
+        .navigate > p {
+            width: 79px;
+            height: 46px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        .Cont-us {
+            width: 268px;
+            height: 68px;
+            gap: 0px;
+            opacity: 0px;
+            position: relative;
+            left: 86px;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .Cconnect-us {
+            width: 268px;
+            height: 20px;
+            left: 819px;
+        }
+        .Cconnect-us > p {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-bottom: 16px;
+        }
+        .connect-us-img {
+            width: 224px;
+            height: 32px;
+            top: 36px;
+            left: 0px;
+            gap: 16px;
+            margin: 0;
+            text-align: left;
+            justify-content: start;
+            position: absolute;
+        }
+        .Ccopyright {
+            width: 268px;
+            height: 70px;
+        }
+        .Ccopyright > p {
+            width: 268px;
+            height: 20px;
+            left: 873px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            /* margin-bottom: 16px; */
+        }
+        .foot-ractangle {
+            width: 100px;
+            height: 34px;
+            top: 36px;
+            left: 875px;
+            background: hsla(229, 85%, 35%, 1);
+            position: absolute;
+        }
+        .menu-icon {
+            display: none;
+            align-items: start;
+        }
+        form {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        }
+
+        label {
+        font-weight: bold;
+        }
+
+        input,
+        select {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        }
+
+        button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        form {
+            border-radius: 8px;
+            top: 458px;
+            background-color: white;
+            padding: 24px;
+            box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.15);
+            
+        }
+
+        .cari-mobil {
+            background-color: hsla(122, 39%, 54%, 1);
+            border-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header style="width: 1440px; height: 504px;  background-color: hsla(231, 100%, 97%, 1); display: flex; margin: 0px; padding: 0px;">
+        <nav class="Cnavbar">
+            <div class="logos"></div>
+            <ul style="display: flex; flex-direction: row; justify-content: space-between; list-style-type: none; align-items: center; text-align: center; gap: 32px; opacity: 1; height: 44px;">
+                <li>
+                    <a>Our Services</a>
+                </li>
+                <li>
+                    <a>Why Us</a>
+                </li>
+                <li>
+                    <a>Testimonial</a>
+                </li>
+                <li>
+                    <a>FAQ</a>
+                </li>
+                <li class="register">
+                    <a style="font-weight: 700;display: flex; justify-content: center;align-items: center;text-align: center;">Register</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="C-copy">
+            <div class="col-md-6" style="display: flex;">
+            <div class="row C-row">
+                <p style="font-size: 36px; font-weight: 700; line-height: 54px; text-align: left; width: 568px; height: 108px; top: 110px; position: absolute;">Sewa & Rental Mobil Terbaik di kawasan Kota Bandung</p>
+                <p style="font-size: 14px; font-weight: 300; line-height: 20px; text-align: left; width: 468px; height: 60px; top: 232px; position: absolute;">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+                <!-- <button type="button" class="btn btn-success cariMobil" style="width: 150px; height: 36px; left: 0px; top: 311px; position: absolute; font-size: 14px; font-weight: 700; line-height: 20px; text-align: center; background-color: hsla(122, 39%, 54%, 1); border-radius: 2px; border-width: 0; color: white;">Mulai Sewa Mobil</button> -->
+            </div>
+            </div>
+            <div class="col-md-6 image-car" style="display: flex;">
+                <img class="bg-image" src="https://res.cloudinary.com/anaspurwo/image/upload/v1710548993/Anas%20Purwo%20Hutomo/Mercedes_Car.svg" alt="">
+            </div>
+        </div>
+
+    </header>
+    
+    
+<form style="display: flex; width: 1047px; height: 58px; position: absolute; justify-content: space-around; align-items: end; left: 196px;">
+    <div style="display: flex; flex-direction: column; width: 210px; gap: 4px;">
+        <label for="driverType" style="color : hsla(0, 0%, 24%, 1); font-weight: 300; font-size: 14px; line-height: 24px;">Tipe Driver</label>
+        <select id="type-driver" name="driverType" title="type-driver">
+            <option value="" style="color: hsla(0, 0%, 54%, 1); font-weight: 300; font-size: 10px;">Pilih Tipe Driver</option>
+            <option value="prince">Dengan Supir</option>
+            <option value="princess">Tanpa Supir (Lepas Kunci)</option>
+        </select>
+    </div>
+
+    <div style="display: flex; flex-direction: column; width: 210px; gap: 4px;">
+        <label for="tanggal" style="color : hsla(0, 0%, 24%, 1); font-weight: 300; font-size: 14px; line-height: 24px;">Tanggal</label>
+        <input type="date" id="date-car" placeholder="Pilih Tanggal"  name="date" style="height: 24px;">
+    </div>
+
+    <div style="display: flex; flex-direction: column; width: 210px; gap: 4px;">
+        <label for="time" style="color : hsla(0, 0%, 24%, 1); font-weight: 300; font-size: 14px; line-height: 24px;">Waktu Jemput/Ambil</label>
+        <input type="time" id="available-at" name="time" placeholder="Pilih Waktu">
+    </div>
+
+    <div style="display: flex; flex-direction: column; width: 210px; gap: 4px;">
+        <label for="jumlahPenumpang" style="color : hsla(0, 0%, 24%, 1); font-weight: 300; font-size: 14px; line-height: 24px;">Jumlah Penumpang (Optional)</label>
+        <input type="number" id="row-seat" name="jumlahPenumpang" placeholder="jumlahPenumpang">
+    </div>
+
+    <button id="search-car" type="submit" class="cari-mobil">Cari Mobil</button>
+</form>
+    
+
+    <button id="load-btn" style="color: transparent; background-color: transparent;">Load</button>
+    <button id="clear-btn" style="color: transparent; background-color: transparent;">Clear</button>
+    
+    <div id="cars-container"></div>
+
+    <footer>
+        <div class="container-footer">
+            <!-- address -->
+            <div class="col-sm-3 Caddress">
+                <div class="col-sm-4 address">
+                <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+                </div>
+                <div class="col-sm-4 address">
+                <p>binarcarrental@gmail.com</p>
+                </div>
+                <div class="col-sm-4 address">
+                <p>081-233-334-808</p>
+                </div>
+            </div>
+            <!-- feature -->
+            <div class="col-sm-3 Cnavigate">
+                <div class="col-sm-3 navigate">
+                <p>Our services</p>
+                </div>
+                <div class="col-sm-3 navigate">
+                <p>Why Us</p>
+                </div>
+                <div class="col-sm-3 navigate">
+                <p>Testimonial</p>
+                </div>
+                <div class="col-sm-3 navigate">
+                <p>FAQ</p>
+                </div>
+            </div>
+            <!-- connect us -->
+            <div class="col-sm-3 Cont-us">
+                <div class="col-sm-6 Cconnect-us">
+                <p>Connect with us</p>
+                </div>
+                <div class="col-sm-6 connect-us-img">
+                <img
+                    src="https://res.cloudinary.com/anaspurwo/image/upload/v1710743594/Anas%20Purwo%20Hutomo/icon_facebook_zm35aa.svg"
+                    alt=""
+                />
+                <img
+                    src="https://res.cloudinary.com/anaspurwo/image/upload/v1710743594/Anas%20Purwo%20Hutomo/icon_instagram_h7mvkf.svg"
+                    alt=""
+                />
+                <img
+                    src="https://res.cloudinary.com/anaspurwo/image/upload/v1710743594/Anas%20Purwo%20Hutomo/icon_twitter_xmxk4d.svg"
+                    alt=""
+                />
+                <img
+                    src="https://res.cloudinary.com/anaspurwo/image/upload/v1710743594/Anas%20Purwo%20Hutomo/icon_mail_hj46vn.svg"
+                    alt=""
+                />
+                <img
+                    src="https://res.cloudinary.com/anaspurwo/image/upload/v1710743594/Anas%20Purwo%20Hutomo/icon_twitch_ynfc2t.svg"
+                    alt=""
+                />
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="col-sm-3">
+                <div class="col-sm-6 Ccopyright">
+                <p>Copyright Binar 2022</p>
+                </div>
+                <div class="col-sm-6 foot-ractangle"></div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.example.js"></script>
+    <script type="text/javascript" src="./scripts/car.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+
+</body>
+</html>

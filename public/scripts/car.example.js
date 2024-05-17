@@ -5,6 +5,10 @@ class Car {
     this.list = cars.map((i) => new this(i));
   }
 
+  formatRupiah(number) {
+    return new Intl.NumberFormat('id-ID', { minimumFractionDigits:0 }).format(number)
+  }
+
   constructor({
     id,
     plate,
